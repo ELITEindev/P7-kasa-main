@@ -1,0 +1,33 @@
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 6px;
+    margin: 10px 0;
+    @include desktop {
+        margin-top: 20px;
+    }
+    .tag {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-width: 7rem;
+        height: 1.4rem;
+        background-color: $primary-color;
+        border-radius: 0.5rem;
+        padding: 0 1rem ;  
+        margin-right: 3px;   
+        @include desktop {
+            height: 1.7rem;
+        }
+        h3 {
+            font-size: 0.6rem;
+            font-weight: 400;
+            color: white;
+            @include desktop {
+                font-size: 0.9rem;
+            }
+        }
+    }
+}
+

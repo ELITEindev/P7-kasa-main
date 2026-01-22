@@ -1,0 +1,20 @@
+// Base styles
+@import './main.scss';
+
+// Layout components
+@import './Header.scss';
+@import './Footer.scss';
+@import './Banner.scss';
+
+// Common components
+@import './Card.scss';
+@import './Carousel.scss';
+@import './Collapse.scss';
+@import './Rating.scss';
+@import './Tag.scss';
+
+// Pages
+@import './pages/Home.scss';
+@import './pages/About.scss';
+@import './pages/Accommodation.scss';
+@import './pages/Error.scss'; 

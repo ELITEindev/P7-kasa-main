@@ -1,0 +1,28 @@
+.host_container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    h3 {
+        display: flex;
+        justify-content: flex-end;
+        padding-right: 0.3rem;
+        color: $primary-color;
+        font-weight: 400;
+        font-size: 0.8rem;
+        text-align: right;
+        width: 4rem;
+        @include tablet {
+            font-size: 0.9rem;
+        }
+        @include desktop {
+            font-size: 1.2rem;
+        }
+    }
+    img {
+        border-radius: 50%;
+        height: 50px;
+        @include desktop {
+            height: 70px;
+        }
+    }
+}

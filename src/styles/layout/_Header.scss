@@ -1,0 +1,67 @@
+.header {   
+    display: flex;
+    font-weight: 400;
+    color: $primary-color;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    &_nav {
+        ul {
+            display: flex;
+            flex-direction: row;
+            padding-inline-start: 0;
+            gap: 0.7rem;
+        }
+        &_link {
+            font-size: 0.7em;
+            text-decoration: none;
+            text-transform: uppercase;    
+            transition: transform 150ms ease-in-out;
+            &:hover {
+                transform: scale(1.05);
+            }
+            &_active {
+                text-decoration: underline;
+            }
+        }
+    }
+    &_logo {
+        img {
+            width: 140px;
+        }
+    }
+    
+    @include tablet{        
+        &_nav {
+            ul {
+                gap: 2rem;
+            }
+            &_link {
+                font-size: 1.1em;
+                text-transform: capitalize;
+            }
+        }
+        &_logo {
+            img {
+                width: 130px;
+            }
+        }
+    }
+    
+    @include desktop{        
+        &_nav {
+            ul {
+                gap: 4rem;
+            }
+            &_link {
+                font-size: 1.3em;
+                text-transform: capitalize;
+            }
+        }
+        &_logo {
+            img {
+                width: 170px;
+            }
+        }
+    }
+}

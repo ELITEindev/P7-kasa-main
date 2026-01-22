@@ -1,0 +1,57 @@
+@import '../utils/variables';
+
+.error_container {
+    @include desktop {
+        @include margin-desktop;
+    }
+    @include tablet {
+        @include margin-tablet;
+    }
+    @include mobile {
+        @include margin-mobile;
+    }
+}
+
+.error {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: $primary-color;
+    margin-bottom: 100px;
+    &_title {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        h1 {
+            font-size: 250px;
+            font-weight: 700;
+            margin: 50px 0 10px;
+            @include tablet {
+                font-size: 150px;
+            }
+            @include mobile {
+                font-size: 100px;
+            }
+        }
+        p {
+            font-size: 30px;
+            text-align: center;
+            margin: 0 2em 0;
+            @include tablet {
+                font-size: 20px;
+            }
+            @include mobile {
+                font-size: 15px;
+            }
+        }
+    }
+    a {
+        margin-top: 7em;
+        text-decoration: underline;
+        font-size: 15px;
+        @include mobile {
+            margin-top: 10em;
+            font-size: 12px;
+        }
+    }
+}

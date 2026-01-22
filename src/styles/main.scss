@@ -1,0 +1,21 @@
+@import './utils/base';
+@import './utils/mixins';
+@import './utils/variables';
+
+@import './layout/Header';
+@import './layout/Banner';
+@import './layout/Footer';
+@import './layout/Presentation';
+
+@import './pages/Error';
+@import './pages/Accommodation';
+@import './pages/Home';
+@import './pages/About';
+
+@import './components/Gallery';
+@import './components/Card';
+@import './components/Collapse';
+@import './components/Carousel';
+@import './components/Tag';
+@import './components/Rating';
+@import './components/Host';

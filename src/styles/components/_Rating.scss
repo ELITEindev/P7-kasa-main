@@ -1,0 +1,27 @@
+.rating_container {
+    display: flex;
+    flex-direction: row;
+    align-items: center; 
+    gap: 4px; 
+    @include tablet {
+        padding-bottom: 0.5em;
+    }  
+    @include desktop {
+        gap: 9px;
+    }
+    .star {
+        font-size: 1.1rem;
+        @include tablet {
+            font-size: 1.3rem;
+        }
+        @include desktop {
+            font-size: 1.8rem;
+        }
+    }
+    .star-empty {
+        color: $tertiary-color;
+    }
+    .star-full {
+        color: $primary-color;
+    }
+}

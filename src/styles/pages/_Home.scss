@@ -1,0 +1,18 @@
+.home {
+    @include desktop {
+        @include margin-desktop;
+    }
+    @include tablet {
+        @include margin-tablet;
+    }
+    @include mobile {
+        @include margin-mobile;
+    }
+}
+
+.banner_img_home {
+    height: 8em;
+    @include desktop {
+    height: 10em;
+    }
+}

@@ -1,0 +1,65 @@
+.presentation_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    @include desktop { 
+        margin-top: 20px;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: start;
+        margin-bottom: 1em;
+    }
+    @include tablet {
+        margin-top: 20px;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: start;
+        gap: 30px;
+        margin-bottom: 1em;
+    }
+    h1 {
+        color: $primary-color;
+        font-size: 1.1rem;
+        font-weight: 400;
+        margin: 12px 0 10px;
+        @include tablet {
+            font-size: 1.3rem;
+            margin: 0 0 10px;
+        }
+        @include desktop {
+            font-size: 2rem;
+            margin: 0 0 10px;
+            width: 22em;
+        }
+    }
+    h2 {
+        color: $primary-color;
+        font-size: 0.8rem;
+        font-weight: 400;
+        margin: 5px 0 0;
+        @include tablet {
+            font-size: 0.9rem;
+        }
+        @include desktop {
+            font-size: 1.1rem;
+        }
+    }
+}
+
+.host_rating_container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    @include tablet {
+        flex-direction: column-reverse;
+        align-items: flex-end;
+        justify-content: space-between;
+    }
+    @include desktop {
+        flex-direction: column-reverse;
+        gap: 10px;
+        align-items: flex-end;
+        justify-content: space-between;
+        padding-bottom: 0.5em;
+    }
+}

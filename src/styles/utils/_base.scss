@@ -1,0 +1,21 @@
+@import './variables';
+
+* {
+    text-decoration: none;
+    font-family: $font-family;
+    box-sizing: border-box;
+}
+
+body {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+a {
+    color: inherit;
+}
