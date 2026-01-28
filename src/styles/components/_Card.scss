@@ -42,8 +42,5 @@
         font-size: 18px;
         color: white;
         z-index: 2;
-        @include desktop {
-            font-size: 15px;
-        }
     }
 }
