@@ -6,8 +6,8 @@
     margin-top: 20px;
     @include tablet {
       flex-wrap: wrap;
-      flex-direction: inherit;
-      justify-content: space-between;
+      flex-direction: row;
+      justify-content: flex-start;
       background-color: $secondary-color;
       border-radius: 15px;
       padding: 45px 45px 0;
@@ -16,8 +16,8 @@
     }
     @include desktop {
       flex-wrap: wrap;
-      flex-direction: inherit;
-      justify-content: space-between;
+      flex-direction: row;
+      justify-content: flex-start;
       background-color: $secondary-color;
       border-radius: 15px;
       padding: 45px 45px 0;
