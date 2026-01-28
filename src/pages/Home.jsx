@@ -11,7 +11,7 @@ function Home() {
         <section>
             <div className='home'>
                 <Header />
-                <Banner title='Test' imgBackground={imgBackground} />
+                <Banner title='Chez vous, partout et ailleurs' imgBackground={imgBackground} />
                 <Gallery accommodations={Accommodations}/>
             </div>
             <Footer />

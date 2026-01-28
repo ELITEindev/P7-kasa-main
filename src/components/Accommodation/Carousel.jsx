@@ -1,22 +1,13 @@
-import React, { Component } from 'react';
+import React, { useState } from 'react';
 import { FontAwesomeIcon  } from '@fortawesome/react-fontawesome';
-import { faAngleRight } from '@fortawesome/free-solid-svg-icons';
-import { faAngleLeft } from '@fortawesome/free-solid-svg-icons';
+import { faAngleRight, faAngleLeft } from '@fortawesome/free-solid-svg-icons';
 import PictureCounter from './PictureCounter';
 
-class Carousel extends Component {
-    constructor(props) {
-        super(props);
-        this.state = { 
-            pictureIndex: 0 
-        }
-    }
+function Carousel({ pictures, title }) {
+    const [pictureIndex, setPictureIndex] = useState(0);
 
-    handleArrowClick = (direction) => {
-        const { pictures } = this.props;
-        const { pictureIndex } = this.state;
-
-        //Calculate the new index of the image according to the direction
+    const handleArrowClick = (direction) => {
+        // Calculate the new index of the image according to the direction
         let newPictureIndex;
         if (direction === 'previous') {
             newPictureIndex = pictureIndex === 0 ? pictures.length - 1 : pictureIndex - 1;
@@ -24,41 +15,35 @@ class Carousel extends Component {
             newPictureIndex = pictureIndex === pictures.length - 1 ? 0 : pictureIndex + 1;
         }
 
-        // Updates the state of the component with the new image index
-        this.setState({ pictureIndex: newPictureIndex });
+        // Updates the state with the new image index
+        setPictureIndex(newPictureIndex);
     };
 
-    render() {
-        const { pictures, title } = this.props;
-        const { pictureIndex } = this.state;
-        return (
-            <section className='carousel'>
-                {
-                    <img
-                    src={pictures[pictureIndex]}
-                    alt={`${title} ${pictureIndex +1}`}
-                    />
-                }
+    return (
+        <section className='carousel'>
+            <img
+                src={pictures[pictureIndex]}
+                alt={`${title} ${pictureIndex + 1}`}
+            />
             <PictureCounter pictures={pictures} pictureIndex={pictureIndex} />
             {pictures.length > 1 && (
                 <div className='carousel_arrows'>
                     <div
                         className='carousel_arrow'
-                        onClick={() => this.handleArrowClick('previous')} // Use handleArrowClick method to handle user click
-                        >
-                            <FontAwesomeIcon icon={faAngleLeft} className='arrow' />
-                        </div>
-                        <div
+                        onClick={() => handleArrowClick('previous')}
+                    >
+                        <FontAwesomeIcon icon={faAngleLeft} className='arrow' />
+                    </div>
+                    <div
                         className='carousel_arrow'
-                        onClick={() => this.handleArrowClick('next')} 
-                        >
-                            <FontAwesomeIcon icon={faAngleRight} className='arrow' />
-                        </div>
+                        onClick={() => handleArrowClick('next')}
+                    >
+                        <FontAwesomeIcon icon={faAngleRight} className='arrow' />
+                    </div>
                 </div>
             )}
-            </section>
-        )
-    }
+        </section>
+    )
 }
 
 export default Carousel;

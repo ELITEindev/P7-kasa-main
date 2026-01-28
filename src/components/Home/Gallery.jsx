@@ -1,9 +1,9 @@
 import Card from './Card';
 
-function Gallery(props) {
+function Gallery({ accommodations }) {
     return (
         <section className='gallery'>
-            {props.accommodations.map((accommodation) => (
+            {accommodations.map((accommodation) => (
                 <Card key={accommodation.id} accommodation={accommodation}/>
             ))}
         </section>
